@@ -1,15 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, ReactNode } from "react";
 
-type Props = {
-  children: React.ReactElement;
+interface Props {
+  children: ReactNode;
   onContentEndVisible: () => void;
-};
+}
 
-type Options = {
+interface Options {
   rootMargin: string;
   threshold: number;
   root: null;
-};
+}
 
 // Опишіть Props
 export function Observer({ children, onContentEndVisible }: Props) {
